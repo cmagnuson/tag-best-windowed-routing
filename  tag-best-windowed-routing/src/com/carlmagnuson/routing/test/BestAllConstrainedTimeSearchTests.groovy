@@ -36,7 +36,7 @@ class BestAllConstrainedTimeSearchTests extends GroovyTestCase {
 	}
 	
 	void testMediumImport(){
-		Graph g = TextGraphImport.loadFromFile("data/mpl20_30");
+		Graph g = TextGraphImport.loadFromFile("data/mpl20_240.txt");
 		
 		long start = System.currentTimeMillis();
 		Route r = BestAllConstrainedTime.findRoute(g, g.getNode(1), g.getNode(4), 0, 100, 0, 100);
@@ -47,7 +47,7 @@ class BestAllConstrainedTimeSearchTests extends GroovyTestCase {
 	}
 	
 	void testLargeImport(){
-		Graph g = TextGraphImport.loadFromFile("data/mpl30_100");
+		Graph g = TextGraphImport.loadFromFile("data/mpl30_240.txt");
 		
 		long start = System.currentTimeMillis();
 		Route r = BestAllConstrainedTime.findRoute(g, g.getNode(1), g.getNode(4), 20, 63, 20, 80);
