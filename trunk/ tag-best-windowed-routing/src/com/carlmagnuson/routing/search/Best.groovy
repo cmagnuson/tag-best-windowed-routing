@@ -68,8 +68,6 @@ class Best {
 		time = nextTime;
 		
 		while(!currentNode.equals(d)){
-//			assert(currentNode!=null);
-//			assert(parent.get(currentNode)!=null);
 			log.trace("Time: "+time);
 			log.trace("Node: "+currentNode.getId());
 			

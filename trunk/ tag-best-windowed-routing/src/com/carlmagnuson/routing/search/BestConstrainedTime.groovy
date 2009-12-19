@@ -36,7 +36,6 @@ class BestConstrainedTime {
 			log.trace("expanding from "+v.getId());
 			for(Edge e: v.getInEdges()){
 					Node u = e.getStart();
-//					for(int t = g.getMinTime(); t<=g.getMaxTime(); t++){
 					for(int t = earliestLeave; t<=latestArrival; t++){
 						if(e.getTraverseTime(t)>=0 && C.get(u).get(t) > e.getTraverseTime(t)+C.get(v).get(t+e.getTraverseTime(t))
 						//this line added to enforce destination time window
@@ -71,8 +70,6 @@ class BestConstrainedTime {
 		time = nextTime;
 		
 		while(!currentNode.equals(d)){
-//			assert(currentNode!=null);
-//			assert(parent.get(currentNode)!=null);
 			log.trace("Time: "+time);
 			log.trace("Node: "+currentNode.getId());
 			
